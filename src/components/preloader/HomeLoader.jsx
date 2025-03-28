@@ -6,7 +6,7 @@ const HomeLoader = ({ msg }) => {
   return (
     <div className='preLoaderBox'>
       <div className='col-12 text-center'>
-        <img style={{ width: "120px" }} src={preLoaderImage} alt="preloader image" />
+        {/* <img style={{ width: "120px" }} src={preLoaderImage} alt="preloader image" /> */}
         <h6 className='text-secondary'>{msg}</h6>
       </div>
     </div>

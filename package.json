@@ -1,9 +1,9 @@
 {
-  "name": "goolu_store",
+  "name": "courseworld.space",
   "private": true,
   "version": "4.0.0",
   "type": "module",
-  "homepage": "https://www.goolu.in",
+  "homepage": "https://www.courseworld.space",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
