@@ -1,0 +1,30 @@
+label{
+    font-size: 14px!important;
+    letter-spacing: 1px;
+    color: #313131;
+    padding:0px 3px!important;
+    font-weight: bold;
+}
+
+
+.inputAddress{
+    font-size: 13px!important;
+    margin-bottom:0px;
+    letter-spacing: 1px;
+    padding:5px 3px!important;
+    color: #000;
+    border:none!important;
+    border-radius:0px!important;
+    border-bottom:2px solid #5b9696!important;
+}
+
+.inputAddress:hover{
+    border-bottom:2px solid #17d1d1!important;
+}
+
+.form-control[readonly] {
+    background: #fff;
+}
+    .form-control:focus {
+    box-shadow: none;
+}

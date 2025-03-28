@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.ratingNumber {
+    margin-top: 30px;
+}
+
+.ratingNumber h1 {
+    font-size: 5em;
+    color: cadetblue;
+    font-family: "Jost", sans-serif;
+}
+
+.FaStar {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.star {
+    color: #8e8e8e;
+}
+
+.activeStar {
+    color: #ff8920;
+}
+
+/* ============================================ */
+.customerReviewBox {
+    margin-top: 30px;
+}
+
+.customerReviewList {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.customerReviewList .userIcon {
+    background: #eee;
+    font-size: 43px;
+    padding: 5px;
+    color: #2d3947;
+}
+
+.customerReviewList .customerName {
+    font-size: 11px;
+}
+
+.customerReviewList .FaStar {
+    font-size: 11px;
+    margin-right: 2px;
+}
+
+.customerReviewList .daysAgo {
+    font-size: 10px;
+}
+
+.customerReviewBox .review {
+    font-size: 11px;
+    color: #555;
+}
+
+.moreReviewBtn {
+    width: 100%;
+    background: #fff22a;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border: 2px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+    color: #222222;
+    text-align: center;
+}
+
+.moreReviewBtn :hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+.moreReviewBtn :active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}

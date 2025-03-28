@@ -1,0 +1,8 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Disallow: /superAdmin/
+Disallow: /SuperAdmin/
+Disallow: /superadmin/
+Disallow: /Superadmin/
+
+
