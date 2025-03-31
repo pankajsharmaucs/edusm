@@ -22,8 +22,8 @@ function SuperTemplate() {
           <PreLoader />
           :
           <>
-            <SuperHeader />
-            <Outlet />
+            {/* <SuperHeader /> */}
+            {/* <Outlet /> */}
             {/* <Footer /> */}
           </>
       }

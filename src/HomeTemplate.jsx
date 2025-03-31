@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 
 import HomeLoader from './components/preloader/HomeLoader';
-import Header from '../src/component/header/Header'
-import Footer from '../src/component/footer/Footer';
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer';
+import Home from './components/home/Home';
 
 const HomeTemplate = () => {
   const [loading, setLoading] = useState(true);
@@ -24,8 +25,8 @@ const HomeTemplate = () => {
       ) : (
         <>
           <Header />
-          {/* <Outlet /> */}
-          {/* <Footer /> */}
+          <Outlet />
+          <Footer />
         </>
       )}
     </div>

@@ -1,100 +1,223 @@
-import React, { useContext, useEffect, useState } from 'react'
-import './footer.css'
-import { Link } from 'react-router-dom'
-import MyContext from '../../useContext/MyContext';
+import React from 'react'
 
 const Footer = () => {
-
-    const { myCartList } = useContext(MyContext);
-
-    const [IsLogined, setIsLogined] = useState(false);
-    const [SelectedIcon, setSelectedIcon] = useState(1);
-
-    const border_bottom = `MenuList_border_bottom mb-3`;
-
-    const currentPath = window.location.pathname;
-
-    // / cart  categories orders dashboard
-
-    useEffect(() => {
-        if (localStorage.getItem('token')) {
-            setIsLogined(true)
-        }
-
-        if (currentPath === '/') { setSelectedIcon(1) }
-        else if (currentPath == '/cart') { setSelectedIcon(2) }
-        else if (currentPath == '/categories') { setSelectedIcon(3) }
-        else if (currentPath == '/orders') { setSelectedIcon(4) }
-        else if (currentPath == '/dashboard') { setSelectedIcon(5) }
-
-    }, [])
-
     return (
-        <div className='d-md-none d-block ' style={{ marginTop: "68px" }}>
-            <div className=" footerMenu jac p-0 ">
-
-                <Link to={`/`}>
-                    <div className={`MenuList ${SelectedIcon === 1 ? border_bottom : ''}`} onClick={() => setSelectedIcon(1)} >
-                        <img src="/assets/menu2/home.png" alt="" className='mb-2' />
-                    </div>
-                </Link>
-
-                <Link to={`/categories`}>
-                    <div className={`MenuList ${SelectedIcon === 3 ? border_bottom : ''}`} onClick={() => setSelectedIcon(3)} >
-                        <img src="/assets/menu2/category.png" alt="" className='mb-2' />
-                    </div>
-                </Link>
-
-                {
-                    IsLogined
-                        ?
-                        <Link to={`/orders`}>
-                            <div className={`MenuList ${SelectedIcon === 4 ? border_bottom : ''}`} onClick={() => setSelectedIcon(4)} >
-                                <img src="/assets/menu2/order.png" alt="" className='mb-2' />
-                            </div>
-                        </Link> : null
-                }
-
-                {/* <Link to={`/cart`}>
-                    <div className={`MenuList ${SelectedIcon === 2 ? border_bottom : ''}`} onClick={() => setSelectedIcon(2)} >
-                        <img src="/assets/menu2/cart.png" alt="" className='mb-2' />
-                    </div>
-                </Link> */}
-
-                <Link className='' to="/cart" onClick={() => setopenMenu(0)} >
-                    <div className={`position-relative MenuList ${SelectedIcon === 2 ? border_bottom : ''}`} onClick={() => setSelectedIcon(2)} >
-                        <img src="/assets/menu2/cart.png" alt="" className='mb-2' />
-                        <p className='bg-primary jcc text-white' style={{
-                            position: "absolute", width: "17px", height: "17px", top: "13px", right: "10px",
-                            fontSize: "12px", borderRadius: "42px"
-                        }}
-                        >{myCartList.myCart.length}
-                        </p>
-                    </div>
-                </Link>
-
-                {
-                    IsLogined
-                        ?
-                        <>
-
-                            <Link to={`/dashboard`}>
-                                <div className={`MenuList ${SelectedIcon === 5 ? border_bottom : ''}`} onClick={() => setSelectedIcon(5)} >
-                                    <img src="/assets/menu2/account.png" alt="" className='mb-2' />
+        <>
+            <footer id="footer">
+                <div className="container padding-medium ">
+                    <div className="row">
+                        <div className="col-sm-6 col-lg-4 my-3">
+                            <div className="footer-menu">
+                                <a href="index.html">
+                                    <img src="/assets/images/logo.png" alt="logo" className="img-fluid" />
+                                </a>
+                                <div className="social-links mt-4">
+                                    <ul className="d-flex list-unstyled ">
+                                        <li className="me-4">
+                                            <a href="#">
+                                                <svg
+                                                    className="social-icon"
+                                                    width={30}
+                                                    height={30}
+                                                    aria-hidden="true"
+                                                >
+                                                    <use xlinkHref="#facebook" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li className="me-4">
+                                            <a href="#">
+                                                <svg
+                                                    className="social-icon"
+                                                    width={30}
+                                                    height={30}
+                                                    aria-hidden="true"
+                                                >
+                                                    <use xlinkHref="#twitter" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li className="me-4">
+                                            <a href="#">
+                                                <svg
+                                                    className="social-icon"
+                                                    width={30}
+                                                    height={30}
+                                                    aria-hidden="true"
+                                                >
+                                                    <use xlinkHref="#instagram" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li className="me-4">
+                                            <a href="#">
+                                                <svg
+                                                    className="social-icon"
+                                                    width={30}
+                                                    height={30}
+                                                    aria-hidden="true"
+                                                >
+                                                    <use xlinkHref="#linkedin" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li className="me-4">
+                                            <a href="#">
+                                                <svg
+                                                    className="social-icon"
+                                                    width={30}
+                                                    height={30}
+                                                    aria-hidden="true"
+                                                >
+                                                    <use xlinkHref="#youtube" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </Link>
-                        </>
-
-                        :
-                        <Link to={`/login`}>
-                            <div className={`MenuList ${SelectedIcon === 5 ? border_bottom : ''}`} onClick={() => setSelectedIcon(5)} >
-                                <img src="/assets/menu2/account.png" alt="" className='mb-2' />
                             </div>
-                        </Link>
-                }
-
+                        </div>
+                        <div className="col-sm-6 col-lg-2 my-3">
+                            <div className="footer-menu">
+                                <h5 className=" fw-bold mb-4">Quick Links</h5>
+                                <ul className="menu-list list-unstyled">
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            About us
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            Courses
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            Blogs
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-lg-2 my-3">
+                            <div className="footer-menu">
+                                <h5 className=" fw-bold mb-4">About</h5>
+                                <ul className="menu-list list-unstyled">
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            How It Works
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            Pricing
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            Promotion
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            Affilation
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-lg-2 my-3">
+                            <div className="footer-menu">
+                                <h5 className=" fw-bold mb-4">Help Center</h5>
+                                <ul className="menu-list list-unstyled">
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            Payments
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            FAQs
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            Checkout
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            Other
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-lg-2 my-3">
+                            <div className="footer-menu">
+                                <h5 className=" fw-bold mb-4">Contact Us</h5>
+                                <ul className="menu-list list-unstyled">
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            contact@yourcompany
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            +110 4587 2445
+                                        </a>
+                                    </li>
+                                    <li className="menu-item mb-2">
+                                        <a href="#" className="footer-link">
+                                            New York, USA
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div id="footer-bottom">
+                <hr className="text-black-50" />
+                <div className="container">
+                    <div className="row py-3">
+                        <div className="col-md-6 copyright">
+                            <p>© 2025 websiteName. All rights reserved.</p>
+                        </div>
+                        <div className="col-md-6 text-md-end">
+                            <p>
+                                <a
+                                    href="https://templatesjungle.com/"
+                                    target="_blank"
+                                    className="fw-bold"
+                                >
+                                    {/* TemplatesJungle */}
+                                </a>{" "}
+                                {/* Distributed by:{" "} */}
+                                <a
+                                    href="https://themewagon.com"
+                                    target="_blank"
+                                    className="fw-bold"
+                                >
+                                    {/* ThemeWagon */}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
