@@ -158,7 +158,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className=" shadow-none"
+          <div className="navbar-toggler shadow-none"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar"
@@ -270,51 +270,14 @@ const Header = () => {
                 </li>
 
                 <li className="nav-item">
-                  <Link onClick={() => closeOffcanvas()} to="/contact" className="btn btn-primary py-3 px-3">
+                  <Link onClick={() => closeOffcanvas()} to="/contact" className="btn btn-primary py-md-2 py-2 px-3 my-md-0 my-2">
                     Get Started
                   </Link>
                 </li>
 
               </ul>
 
-              {/* <div className="d-none d-lg-flex align-items-center">
-                <ul className="d-flex  align-items-center list-unstyled m-0">
-                  <li className="">
-                    <a
-                      href="#"
-                      className="ms-3"
-                      data-bs-toggle="offcanvas"
-                      data-bs-target="#offcanvasCart"
-                      aria-controls="offcanvasCart"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22px"
-                        height="22px"
-                      >
-                        <use href="#shopping-bag" />
-                      </svg>{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="ms-3"
-                      data-bs-toggle="offcanvas"
-                      data-bs-target="#offcanvasSearch"
-                      aria-controls="offcanvasSearch"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22px"
-                        height="22px"
-                      >
-                        <use href="#search" />
-                      </svg>{" "}
-                    </a>
-                  </li>
-                </ul>
-              </div> */}
+             
 
             </div>
           </div>

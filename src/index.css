@@ -21,10 +21,10 @@ body {
     --bg5: #ff9c98;
     --bg6: #eef0f6;
     --bg7: #fffeef;
-    
+
     --rgba1: rgba(255, 255, 255, 0.4);
     --rgba2: rgba(0, 0, 0, 0.08);
-    
+
 
     --text1: #212121;
     --text2: #ffffff;
@@ -35,6 +35,10 @@ body {
     --ff4: "Work Sans", sans-serif;
     --ff5: "Inter", sans-serif;
     font-family: "Jost", sans-serif;
+}
+
+.navbar-toggler {
+    border: none !important;
 }
 
 .ptr__pull-down--pull-more p {
