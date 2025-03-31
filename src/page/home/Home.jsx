@@ -130,6 +130,49 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+
+            </div>
+
+            <div className="col-md-4">
+              <div className="primary rounded-3 p-4 my-3">
+                <div className="d-flex align-items-center">
+                  <i className="fa-solid fa-mountain  me-2 svg-primary f35"></i>
+                  <div className="ps-4">
+                    <p className="category-paragraph fw-bold text-uppercase mb-1">
+                      Geology
+                    </p>
+                    <p className="category-paragraph m-0">6th - 10th Class</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="secondary rounded-3 p-4 my-3">
+                <div className="d-flex align-items-center">
+                  <i className="fa fa-globe   me-2 svg-primary f35"></i>
+                  <div className="ps-4">
+                    <p className="category-paragraph fw-bold text-uppercase mb-1">
+                      Social Science
+                    </p>
+                    <p className="category-paragraph m-0">6th - 10th Class</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="col-md-4">
+              <div className="primary rounded-3 p-4 my-3">
+                <div className="d-flex align-items-center">
+                  <i className="fa fa-laptop  me-2 svg-primary f35"></i>
+                  <div className="ps-4">
+                    <p className="category-paragraph fw-bold text-uppercase mb-1">
+                      Computer Science
+                    </p>
+                    <p className="category-paragraph m-0">6th - 10th Class</p>
+                  </div>
+                </div>
+              </div>
+
               <div className="secondary rounded-3 p-4 my-3">
                 <div className="d-flex align-items-center">
 
@@ -140,92 +183,128 @@ const Home = () => {
                       Science
                     </p>
                     <p className="category-paragraph m-0">6th - 10th Class</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="category">
+        <div className="container py-4">
+          <div className="d-md-flex justify-content-between align-items-center">
+            <div>
+              <p className="text-secondary ">Pick your class and get started</p>
+              <h2 className="display-6 fw-semibold">Classes</h2>
+            </div>
+            <div className="mt-4 mt-md-0">
+              <Link to="/all-subjects" className="btn btn-primary px-3 py-2">
+                View all Classes
+              </Link>
+            </div>
+          </div>
+          <div className="row g-md-3 mt-2">
+
+            <div className="col-md-4">
+              <div className="tertiary rounded-3 p-4 my-3">
+                <div className="d-flex align-items-center">
+                  <i className="fa fa-child me-2 svg-primary f35"></i>
+                  <div className="ps-4">
+                    <p className="category-paragraph fw-bold text-uppercase mb-1">
+                      6th Class
+                    </p>
+                    <p className="category-paragraph m-0">Beginner Level</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="col-md-4">
-              <div className="primary rounded-3 p-4 my-3">
-                <div className="d-flex align-items-center">
-                  <i className="fa fa-book me-2 svg-primary f35"></i>
-                  <div className="ps-4">
-                    <p className="category-paragraph fw-bold text-uppercase mb-1">
-                      English
-                    </p>
-                    <p className="category-paragraph m-0">6th - 10th Class</p>
-                  </div>
-                </div>
-              </div>
               <div className="tertiary rounded-3 p-4 my-3">
                 <div className="d-flex align-items-center">
-
-                  <i className="fa fa-calculator me-2 svg-primary f35"></i>
-
+                  <i className="fa fa-user-graduate me-2 svg-primary f35"></i>
                   <div className="ps-4">
                     <p className="category-paragraph fw-bold text-uppercase mb-1">
-                      Mathematics
+                      7th Class
                     </p>
-                    <p className="category-paragraph m-0">6th - 10th Class</p>
-                  </div>
-                </div>
-              </div>
-              <div className="secondary rounded-3 p-4 my-3">
-                <div className="d-flex align-items-center">
-
-                  <i className="fa fa-flask  me-2 svg-primary f35"></i>
-
-                  <div className="ps-4">
-                    <p className="category-paragraph fw-bold text-uppercase mb-1">
-                      Science
-                    </p>
-                    <p className="category-paragraph m-0">6th - 10th Class</p>
+                    <p className="category-paragraph m-0">Intermediate Level</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="col-md-4">
-              <div className="primary rounded-3 p-4 my-3">
-                <div className="d-flex align-items-center">
-                  <i className="fa fa-book me-2 svg-primary f35"></i>
-                  <div className="ps-4">
-                    <p className="category-paragraph fw-bold text-uppercase mb-1">
-                      English
-                    </p>
-                    <p className="category-paragraph m-0">6th - 10th Class</p>
-                  </div>
-                </div>
-              </div>
               <div className="tertiary rounded-3 p-4 my-3">
                 <div className="d-flex align-items-center">
-
-                  <i className="fa fa-calculator me-2 svg-primary f35"></i>
-
+                  <i className="fa fa-chalkboard-teacher me-2 svg-primary f35"></i>
                   <div className="ps-4">
                     <p className="category-paragraph fw-bold text-uppercase mb-1">
-                      Mathematics
+                      8th Class
                     </p>
-                    <p className="category-paragraph m-0">6th - 10th Class</p>
-                  </div>
-                </div>
-              </div>
-              <div className="secondary rounded-3 p-4 my-3">
-                <div className="d-flex align-items-center">
-
-                  <i className="fa fa-flask  me-2 svg-primary f35"></i>
-
-                  <div className="ps-4">
-                    <p className="category-paragraph fw-bold text-uppercase mb-1">
-                      Science
-                    </p>
-                    <p className="category-paragraph m-0">6th - 10th Class</p>
+                    <p className="category-paragraph m-0">Advanced Learning</p>
                   </div>
                 </div>
               </div>
             </div>
 
+            <div className="col-md-4">
+              <div className="tertiary rounded-3 p-4 my-3">
+                <div className="d-flex align-items-center">
+                  <i className="fa fa-book me-2 svg-primary f35"></i>
+                  <div className="ps-4">
+                    <p className="category-paragraph fw-bold text-uppercase mb-1">
+                      9th Class
+                    </p>
+                    <p className="category-paragraph m-0">High School</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <div className="col-md-4">
+              <div className="tertiary rounded-3 p-4 my-3">
+                <div className="d-flex align-items-center">
+                  <i className="fa fa-school me-2 svg-primary f35"></i>
+                  <div className="ps-4">
+                    <p className="category-paragraph fw-bold text-uppercase mb-1">
+                      10th Class
+                    </p>
+                    <p className="category-paragraph m-0">Board Exams Prep</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="tertiary rounded-3 p-4 my-3">
+                <div className="d-flex align-items-center">
+                  <i className="fa fa-university me-2 svg-primary f35"></i>
+                  <div className="ps-4">
+                    <p className="category-paragraph fw-bold text-uppercase mb-1">
+                      11th Class
+                    </p>
+                    <p className="category-paragraph m-0">Pre-University</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="tertiary rounded-3 p-4 my-3">
+                <div className="d-flex align-items-center">
+                  <i className="fa fa-user-tie me-2 svg-primary f35"></i>
+                  <div className="ps-4">
+                    <p className="category-paragraph fw-bold text-uppercase mb-1">
+                      12th Class
+                    </p>
+                    <p className="category-paragraph m-0">Career Readiness</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -242,6 +321,7 @@ const Home = () => {
             </h2>
           </div>
           <div className="row">
+
             <div className="col-sm-6 col-lg-4 col-xl-3 mb-5">
               <div className="z-1 position-absolute m-4">
                 <span className="badge text-white bg-secondary">New</span>
@@ -303,438 +383,12 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 col-lg-4 col-xl-3 mb-5">
-              <div className="z-1 position-absolute m-4">
-                <span className="badge text-white bg-secondary">New</span>
-              </div>
-              <div className="card rounded-4 border-0 shadow-sm p-3 position-relative">
-                <a href="courses-details.html">
-                  <img
-                    src="/assets/images/item2.jpg"
-                    className="img-fluid rounded-3"
-                    alt="image"
-                  />
-                </a>
-                <div className="card-body p-0">
-                  <div className="d-flex justify-content-between my-3">
-                    <p className="text-black-50 fw-bold text-uppercase m-0">
-                      Digital Marketing
-                    </p>
-                    <div className="d-flex align-items-center">
-                      <svg width={20} height={20}>
-                        <use xlinkHref="#clock" className="text-black-50" />
-                      </svg>
-                      <p className="text-black-50 fw-bold text-uppercase m-0">
-                        1h 50m
-                      </p>
-                    </div>
-                  </div>
-                  <a href="courses-details.html">
-                    <h5 className="course-title py-2 m-0">
-                      Web Wizardry 101: Mastering the Internet
-                    </h5>
-                  </a>
-                  <div className="card-text">
-                    <span className="rating d-flex align-items-center mt-3">
-                      <p className="text-muted fw-semibold m-0 me-2">
-                        By: James Willam
-                      </p>
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-lg-4 col-xl-3 mb-5">
-              {/* <div class="z-1 position-absolute m-4">
-        <span class="badge text-white bg-secondary">New</span>
-      </div> */}
-              <div className="card rounded-4 border-0 shadow-sm p-3 position-relative">
-                <a href="courses-details.html">
-                  <img
-                    src="/assets/images/item3.jpg"
-                    className="img-fluid rounded-3"
-                    alt="image"
-                  />
-                </a>
-                <div className="card-body p-0">
-                  <div className="d-flex justify-content-between my-3">
-                    <p className="text-black-50 fw-bold text-uppercase m-0">
-                      Digital Marketing
-                    </p>
-                    <div className="d-flex align-items-center">
-                      <svg width={20} height={20}>
-                        <use xlinkHref="#clock" className="text-black-50" />
-                      </svg>
-                      <p className="text-black-50 fw-bold text-uppercase m-0">
-                        1h 50m
-                      </p>
-                    </div>
-                  </div>
-                  <a href="courses-details.html">
-                    <h5 className="course-title py-2 m-0">
-                      E-Learning Essentials: A Comprehensive Guide
-                    </h5>
-                  </a>
-                  <div className="card-text">
-                    <span className="rating d-flex align-items-center mt-3">
-                      <p className="text-muted fw-semibold m-0 me-2">
-                        By: James Willam
-                      </p>
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-lg-4 col-xl-3 mb-5">
-              <div className="z-1 position-absolute m-4">
-                <span className="badge text-white bg-secondary">Sale</span>
-              </div>
-              <div className="card rounded-4 border-0 shadow-sm p-3 position-relative">
-                <a href="courses-details.html">
-                  <img
-                    src="/assets/images/item4.jpg"
-                    className="img-fluid rounded-3"
-                    alt="image"
-                  />
-                </a>
-                <div className="card-body p-0">
-                  <div className="d-flex justify-content-between my-3">
-                    <p className="text-black-50 fw-bold text-uppercase m-0">
-                      Digital Marketing
-                    </p>
-                    <div className="d-flex align-items-center">
-                      <svg width={20} height={20}>
-                        <use xlinkHref="#clock" className="text-black-50" />
-                      </svg>
-                      <p className="text-black-50 fw-bold text-uppercase m-0">
-                        1h 50m
-                      </p>
-                    </div>
-                  </div>
-                  <a href="courses-details.html">
-                    <h5 className="course-title py-2 m-0">
-                      CyberClass 101: A Guide to Online Education
-                    </h5>
-                  </a>
-                  <div className="card-text">
-                    <span className="rating d-flex align-items-center mt-3">
-                      <p className="text-muted fw-semibold m-0 me-2">
-                        By: James Willam
-                      </p>
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-lg-4 col-xl-3 mb-5">
-              {/* <div class="z-1 position-absolute m-4">
-        <span class="badge text-white bg-secondary">New</span>
-      </div> */}
-              <div className="card rounded-4 border-0 shadow-sm p-3 position-relative">
-                <a href="courses-details.html">
-                  <img
-                    src="/assets/images/item5.jpg"
-                    className="img-fluid rounded-3"
-                    alt="image"
-                  />
-                </a>
-                <div className="card-body p-0">
-                  <div className="d-flex justify-content-between my-3">
-                    <p className="text-black-50 fw-bold text-uppercase m-0">
-                      Digital Marketing
-                    </p>
-                    <div className="d-flex align-items-center">
-                      <svg width={20} height={20}>
-                        <use xlinkHref="#clock" className="text-black-50" />
-                      </svg>
-                      <p className="text-black-50 fw-bold text-uppercase m-0">
-                        1h 50m
-                      </p>
-                    </div>
-                  </div>
-                  <a href="courses-details.html">
-                    <h5 className="course-title py-2 m-0">
-                      Mastering the Art of Digital Communication
-                    </h5>
-                  </a>
-                  <div className="card-text">
-                    <span className="rating d-flex align-items-center mt-3">
-                      <p className="text-muted fw-semibold m-0 me-2">
-                        By: James Willam
-                      </p>
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-lg-4 col-xl-3 mb-5">
-              <div className="z-1 position-absolute m-4">
-                <span className="badge text-white bg-secondary">New</span>
-              </div>
-              <div className="card rounded-4 border-0 shadow-sm p-3 position-relative">
-                <a href="courses-details.html">
-                  <img
-                    src="/assets/images/item6.jpg"
-                    className="img-fluid rounded-3"
-                    alt="image"
-                  />
-                </a>
-                <div className="card-body p-0">
-                  <div className="d-flex justify-content-between my-3">
-                    <p className="text-black-50 fw-bold text-uppercase m-0">
-                      Digital Marketing
-                    </p>
-                    <div className="d-flex align-items-center">
-                      <svg width={20} height={20}>
-                        <use xlinkHref="#clock" className="text-black-50" />
-                      </svg>
-                      <p className="text-black-50 fw-bold text-uppercase m-0">
-                        1h 50m
-                      </p>
-                    </div>
-                  </div>
-                  <a href="courses-details.html">
-                    <h5 className="course-title py-2 m-0">
-                      Web Wizardry 101: Mastering the Internet
-                    </h5>
-                  </a>
-                  <div className="card-text">
-                    <span className="rating d-flex align-items-center mt-3">
-                      <p className="text-muted fw-semibold m-0 me-2">
-                        By: James Willam
-                      </p>
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-lg-4 col-xl-3 mb-5">
-              {/* <div class="z-1 position-absolute m-4">
-        <span class="badge text-white bg-secondary">New</span>
-      </div> */}
-              <div className="card rounded-4 border-0 shadow-sm p-3 position-relative">
-                <a href="courses-details.html">
-                  <img
-                    src="/assets/images/item7.jpg"
-                    className="img-fluid rounded-3"
-                    alt="image"
-                  />
-                </a>
-                <div className="card-body p-0">
-                  <div className="d-flex justify-content-between my-3">
-                    <p className="text-black-50 fw-bold text-uppercase m-0">
-                      Digital Marketing
-                    </p>
-                    <div className="d-flex align-items-center">
-                      <svg width={20} height={20}>
-                        <use xlinkHref="#clock" className="text-black-50" />
-                      </svg>
-                      <p className="text-black-50 fw-bold text-uppercase m-0">
-                        1h 50m
-                      </p>
-                    </div>
-                  </div>
-                  <a href="courses-details.html">
-                    <h5 className="course-title py-2 m-0">
-                      E-Learning Essentials: A Comprehensive Guide
-                    </h5>
-                  </a>
-                  <div className="card-text">
-                    <span className="rating d-flex align-items-center mt-3">
-                      <p className="text-muted fw-semibold m-0 me-2">
-                        By: James Willam
-                      </p>
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-lg-4 col-xl-3 mb-5">
-              <div className="z-1 position-absolute m-4">
-                <span className="badge text-white bg-secondary">Sale</span>
-              </div>
-              <div className="card rounded-4 border-0 shadow-sm p-3 position-relative">
-                <a href="courses-details.html">
-                  <img
-                    src="/assets/images/item8.jpg"
-                    className="img-fluid rounded-3"
-                    alt="image"
-                  />
-                </a>
-                <div className="card-body p-0">
-                  <div className="d-flex justify-content-between my-3">
-                    <p className="text-black-50 fw-bold text-uppercase m-0">
-                      Digital Marketing
-                    </p>
-                    <div className="d-flex align-items-center">
-                      <svg width={20} height={20}>
-                        <use xlinkHref="#clock" className="text-black-50" />
-                      </svg>
-                      <p className="text-black-50 fw-bold text-uppercase m-0">
-                        1h 50m
-                      </p>
-                    </div>
-                  </div>
-                  <a href="courses-details.html">
-                    <h5 className="course-title py-2 m-0">
-                      CyberClass 101: A Guide to Online Education
-                    </h5>
-                  </a>
-                  <div className="card-text">
-                    <span className="rating d-flex align-items-center mt-3">
-                      <p className="text-muted fw-semibold m-0 me-2">
-                        By: James Willam
-                      </p>
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                      <iconify-icon
-                        icon="clarity:star-solid"
-                        className="text-primary"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
           <div className="text-center mt-4">
-            <a href="courses.html" className="btn btn-primary px-5 py-3">
+            <Link to="courses" className="btn btn-primary px-5 py-3">
               View all courses
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -877,7 +531,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="teacher" className="py-4">
+      {/* <section id="teacher" className="py-4">
         <div className="container">
           <div className="text-center mb-5">
             <p className="text-secondary">Meet our popular teachers</p>
@@ -1221,9 +875,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section id="points" className="py-4 pt-0">
+      {/* <section id="points" className="py-4 pt-0">
         <div className="container">
           <div className="text-center">
             <p className="text-secondary ">What features we provide</p>
@@ -1308,7 +962,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="register">
         <div className="container padding-medium">

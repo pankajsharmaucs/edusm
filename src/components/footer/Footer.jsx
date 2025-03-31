@@ -4,12 +4,13 @@ const Footer = () => {
     return (
         <>
             <footer id="footer">
-                <div className="container padding-medium ">
+                <div className="container py-4 ">
                     <div className="row">
                         <div className="col-sm-6 col-lg-4 my-3">
                             <div className="footer-menu">
                                 <a href="index.html">
-                                    <img src="/assets/images/logo.png" alt="logo" className="img-fluid" />
+                                    {/* <img src="/assets/images/logo.png" alt="logo" className="img-fluid" /> */}
+                                    <h2>Admin Panel</h2>
                                 </a>
                                 <div className="social-links mt-4">
                                     <ul className="d-flex list-unstyled ">
