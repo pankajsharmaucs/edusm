@@ -134,16 +134,16 @@ const Header = () => {
 
       <section id="top-nav" className="bg-secondary">
         <div className="text-center px-md-3 py-md-2">
-          <p className="text-white py-1 m-0">
+          <p className="text-white p-2 m-0 f14 ">
             Get your first course at 50% Discount. Offer lasts for the first 50
             students only.
             <span>
-              <a
-                href="account.html"
+              <Link
+                to="/account"
                 className="text-white text-decoration-underline"
               >
                 Register now
-              </a>
+              </Link>
             </span>
           </p>
         </div>
@@ -152,10 +152,10 @@ const Header = () => {
       <nav className="main-menu d-flex navbar navbar-expand-lg p-2 py-3 p-lg-4 py-lg-4 ">
         <div className="container-fluid">
           <div className="main-logo d-lg-none">
-            <a href="index.html">
+            <Link to="/">
               {/* <img src="/assets/images/logo.png" alt="logo" className="img-fluid" /> */}
               <h5>Admin Panel</h5>
-            </a>
+            </Link>
           </div>
 
           <div className=" shadow-none"
