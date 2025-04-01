@@ -1,6 +1,6 @@
 import React from 'react'
 import "./preLoader.css"
-import preLoaderImage from "/assets/preloader3.gif"
+import preLoaderImage from "/assets/loader_edu.gif"
 
 const PreLoader = ({ msg }) => {
   return (

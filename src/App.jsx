@@ -10,6 +10,11 @@ import HomeTemplate from './HomeTemplate';
 import SuperTemplate from './SuperTemplate';
 import About from './page/about/About';
 import Class from './page/class/Class';
+import SuperAccount from './page/superAdmin/SuperAccount';
+import Super_Dashboard from './page/superAdmin/page/Super_Dashboard';
+import SuperAdmin_Cat from './page/superAdmin/page/SuperAdmin_Cat';
+import SuperAdmin_Classes from './page/superAdmin/page/SuperAdmin_Classes';
+import SuperAdmin_AddCat from './page/superAdmin/page/SuperAdmin_AddCat';
 
 function App() {
 
@@ -33,8 +38,14 @@ function App() {
 
         {/* ============ Super Admin ===== */}
         <Route path="/superAdmin" element={<SuperTemplate />} >
-          {/* <Route index element={<SuperAccount />} /> */}
-          {/* <Route path="login" element={<SuperAccount />} />
+          <Route index element={<SuperAccount />} />
+          <Route path="dashboard"  element={<Super_Dashboard />} />
+          <Route path="board" element={<SuperAdmin_Cat />} />
+          <Route path="addBoard" element={<SuperAdmin_AddCat />} />
+          
+          <Route path="addClasses/:board_id" element={<SuperAdmin_AddCat />} />
+          <Route path="classes/:board_id/:board_name" element={<SuperAdmin_Classes />} />
+          {/*
           <Route path="product_review_list/:product_id" element={<Super_Product_Review_List />} /> */}
         </Route>
 

@@ -53,7 +53,6 @@ const SuperAdmin_AddCat = () => {
                 token: token,
                 cat_name: Title,
                 image: file1,
-                type: "add",
             }
 
             let url = import.meta.env.VITE_API_ADMIN_ADD_UPDATE_CATEGORY;

@@ -5,6 +5,8 @@ import Card4 from '../../../components/cards/Card4';
 
 const Super_Dashboard = () => {
 
+  // console.log(localStorage);
+
   const navigate = useNavigate();
   let jsc = `justify-content-start align-items-center`
   const adminUrl = "/superAdmin/";
@@ -32,7 +34,7 @@ const Super_Dashboard = () => {
             </div>
 
             <div className='col-xl-3 col-md-4 col-sm-6 col-6 mb-3  p-2'>
-              <Card4 url={`${adminUrl}category`} img={"/assets/icons/products.png"} title={"Category"} />
+              <Card4 url={`${adminUrl}board`} img={"/assets/icons/products.png"} title={"Board"} />
             </div>
 
             <div className='col-xl-3 col-md-4 col-sm-6 col-6 mb-3  p-2'>

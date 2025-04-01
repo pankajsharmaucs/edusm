@@ -1,24 +1,41 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
-const List1 = ({ data,cat_id }) => {
-    // console.log(data);
+const List1 = ({ data, handleUpdate, openDeleteModal }) => {
+    const [className, setClassName] = useState(data.class_name);
+
+    const handleClassNameChange = (e) => {
+        setClassName(e.target.value);
+    };
+
+    const handleUpdateClick = () => {
+        handleUpdate(data.class_id, className);
+    };
+
+    const handleDeleteClick = () => {
+        openDeleteModal(data.class_id);
+    };
+
     return (
-
         <tr className='border'>
-            <td>1</td>
-            <td>{data.title.substr(0, 34)}...</td>
-            <td>{data.quantity}</td>
+            <td>{data.class_id}</td>
             <td>
-                <Link to={`../editProduct?pro_id=${data.product_id}&cat_id=${cat_id}`}>
-                    <button className='btn btn-sm btn-warning'>
-                        Edit
-                    </button>
-                </Link>
+                <input 
+                    type="text" 
+                    value={className} 
+                    onChange={handleClassNameChange} 
+                    className='form-control' 
+                />
+            </td>
+            <td>
+                <button className='btn btn-sm btn-outline-success me-2' onClick={handleUpdateClick}>
+                    Update
+                </button>
+                <button className='btn btn-sm btn-outline-danger' onClick={handleDeleteClick}>
+                    Delete
+                </button>
             </td>
         </tr>
+    );
+};
 
-    )
-}
-
-export default List1
+export default List1;

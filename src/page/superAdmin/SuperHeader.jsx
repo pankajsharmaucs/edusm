@@ -92,7 +92,7 @@ const SuperHeader = () => {
                         <>
                           <Link to={'/'}>
                             <div className='icon' onClick={() => setopenMenu(1)} >
-                              <SlHome className='text-primary ' />
+                              <SlHome className='text-primary f24' />
                             </div>
                           </Link>
                         </>
