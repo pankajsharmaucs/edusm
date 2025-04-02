@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const List1 = ({ data, handleUpdate, openDeleteModal }) => {
-    const [className, setClassName] = useState(data.class_name);
+const List3 = ({ data, handleUpdate, openDeleteModal }) => {
+    const [SubjectName, setSubjectName] = useState(data.subject_name);
 
-    const handleClassNameChange = (e) => {
-        setClassName(e.target.value);
+    const handleSubjectNameChange = (e) => {
+        setSubjectName(e.target.value);
     };
 
     const handleUpdateClick = () => {
-        handleUpdate(data.class_id, className);
+        handleUpdate(data.subject_id, SubjectName);
     };
 
     const handleDeleteClick = () => {
-        openDeleteModal(data.class_id);
+        openDeleteModal(data.subject_id);
     };
 
     return (
         <tr className='border'>
-            <td>{data.class_id}</td>
+            <td>{data.subject_id}</td>
             <td>
                 <input
                     type="text"
-                    value={className}
-                    onChange={handleClassNameChange}
-                    className='form-control'
+                    value={SubjectName}
+                    onChange={handleSubjectNameChange}
+                    SubjectName='form-control'
                 />
             </td>
             <td>
@@ -37,14 +37,13 @@ const List1 = ({ data, handleUpdate, openDeleteModal }) => {
             </td>
 
             <td>
-                <Link to={`/superAdmin/subjects/${data.class_id}/${className}`} className='btn btn-sm btn-outline-primary me-2 f14' >
+                <Link to={`/superAdmin/topics/${data.subject_id}/${SubjectName}`} className='btn btn-sm btn-outline-primary me-2 f14' >
                     View All
                 </Link>
-                 
             </td>
 
         </tr>
     );
 };
 
-export default List1;
+export default List3;

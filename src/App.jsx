@@ -15,6 +15,8 @@ import Super_Dashboard from './page/superAdmin/page/Super_Dashboard';
 import SuperAdmin_Cat from './page/superAdmin/page/SuperAdmin_Cat';
 import SuperAdmin_Classes from './page/superAdmin/page/SuperAdmin_Classes';
 import SuperAdmin_AddCat from './page/superAdmin/page/SuperAdmin_AddCat';
+import SuperAdmin_Subject from './page/superAdmin/page/SuperAdmin_Subject';
+import SuperAdmin_topics from './page/superAdmin/page/SuperAdmin_topics';
 
 function App() {
 
@@ -45,6 +47,11 @@ function App() {
           
           <Route path="addClasses/:board_id" element={<SuperAdmin_AddCat />} />
           <Route path="classes/:board_id/:board_name" element={<SuperAdmin_Classes />} />
+
+          <Route path="subjects/:class_id/:class_name" element={<SuperAdmin_Subject />} />
+
+          <Route path="topics/:subject_id/:subject_name" element={<SuperAdmin_topics />} />
+
           {/*
           <Route path="product_review_list/:product_id" element={<Super_Product_Review_List />} /> */}
         </Route>

@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import List1 from '../../../components/List.jsx/List1';
 import PreLoader from '../../../components/preloader/PreLoader';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Modal, Button } from 'react-bootstrap';  // Import Bootstrap Modal
 import Alert from '../../../components/popup/Alert';
 import Swal from "sweetalert2";
+import List3 from '../../../components/List.jsx/List3';
 
-const SuperAdmin_Classes = () => {
+const SuperAdmin_topics = () => {
     const [loading, SetLoading] = useState(true);
-    const { board_id, board_name } = useParams(); // Access the dynamic parameter
-    const [classList, setclassList] = useState([]);
+    const { class_id, class_name } = useParams(); // Access the dynamic parameter
+    const [subjectList, setsubjectList] = useState([]);
     const [showModal, setShowModal] = useState(false); // State to control modal visibility
-    const [classToDelete, setClassToDelete] = useState(null); // Class ID to be deleted
+    const [SubjectToDelete, setSubjectToDelete] = useState(null); // Class ID to be deleted
     const user_id = localStorage.getItem('superUserId');
     const token = localStorage.getItem('superToken');
 
-    // Fetch classes when the board_id changes
-    const getClasses = () => {
-        let url = import.meta.env.VITE_API_USER_GET_CLASSES_BY_BOARD_ID + "?board_id=" + board_id;
+    // Fetch Subject  
+    const getSubjects = () => {
+        let url = import.meta.env.VITE_API_ADMIN_GET_SUBJECT_BY_CLASS_ID + "?class_id=" + class_id;
         axios.get(url).then((response) => {
             if (response.data.msg === 'success') {
-                setclassList(response.data.pro_detail); // Set the class list if successful
+                setsubjectList(response.data.pro_detail); // Set the class list if successful
             }
         }).catch((error) => {
             console.error(error);
@@ -31,44 +31,45 @@ const SuperAdmin_Classes = () => {
     };
 
     useEffect(() => {
-        getClasses();
-    }, [board_id]);
+        getSubjects();
+    }, [class_id]);
 
-    const addClasses = () => {
+
+    const addSubjects = (class_id) => {
         Swal.fire({
-            title: "Add New Class",
+            title: "Add New Subject",
             html: `
-                <input id="class_name" class="swal2-input" placeholder="Enter Class Name">
+                <input id="subject_name" class="swal2-input" placeholder="Enter Subject Name">
             `,
             showCancelButton: true,
-            confirmButtonText: "Add Class",
+            confirmButtonText: "Add Subject",
             preConfirm: () => {
-                const class_name = document.getElementById("class_name").value.trim();
+                const subject_name = document.getElementById("subject_name").value.trim();
 
-                if (!class_name || !board_id) {
+                if (!subject_name || !class_id) {
                     Swal.showValidationMessage("All fields are required!");
                     return false;
                 }
 
-                return { class_name, board_id };
+                return { subject_name, class_id };
             }
         }).then((result) => {
             if (result.isConfirmed) {
-                const { class_name, board_id } = result.value;
+                const { subject_name, class_id } = result.value;
                 const formData = new FormData();
-                formData.append("class_name", class_name);
                 formData.append("type", "add");
-                formData.append("board_id", board_id);
+                formData.append("subject_name", subject_name);
+                formData.append("class_id", class_id);
                 formData.append("user_id", user_id); // Replace with dynamic user_id
                 formData.append("token", token); // Replace with actual token
 
-                axios.post(`${import.meta.env.VITE_API_ADMIN_ADD_UPDATE_CLASS}`, formData, {
+                axios.post(`${import.meta.env.VITE_API_ADMIN_ADD_UPDATE_SUBJECT}`, formData, {
                     headers: { "Content-Type": "multipart/form-data" }
                 })
                     .then(response => {
                         if (response.data.msg === "success") {
                             Alert.success("Success", "Class added successfully!", "success");
-                            getClasses();
+                            getSubjects();
                         } else {
                             Alert.error("Error", "Failed to add class.", "error");
                         }
@@ -81,37 +82,33 @@ const SuperAdmin_Classes = () => {
         });
     }
 
-
-    
-
     // Handle updating class
-    const handleUpdate = (class_id, updatedClassName) => {
-        const updatedClasses = classList.map((classItem) =>
-            classItem.class_id === class_id
-                ? { ...classItem, class_name: updatedClassName }
-                : classItem
+    const handleUpdate = (subject_id, updatedSubjectName) => {
+        const updatedSubject = subjectList.map((subjectItem) =>
+            subjectItem.class_id === class_id
+                ? { ...subjectItem, class_name: updatedSubjectName }
+                : subjectItem
         );
-        setclassList(updatedClasses);
+        setsubjectList(updatedSubject);
 
         const formData = new FormData();
-        formData.append("class_id", class_id);
-        formData.append("class_name", updatedClassName);
+        formData.append("subject_id", subject_id);
+        formData.append("subject_name", updatedSubjectName);
         formData.append("type", "update");
-        formData.append("board_id", board_id);
+        formData.append("class_id", class_id);
         formData.append("user_id", user_id);
         formData.append("token", token);
 
         // console.log(formData);return
 
-
-        axios.post(`${import.meta.env.VITE_API_ADMIN_ADD_UPDATE_CLASS}`, formData, {
+        axios.post(`${import.meta.env.VITE_API_ADMIN_ADD_UPDATE_SUBJECT}`, formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             }
         }).then(response => {
             if (response.data.msg === "success") {
-                console.log("Class updated successfully");
-                Alert.success("Class updated successfully!");
+                // console.log("Subject updated successfully");
+                Alert.success("Subject updated successfully!");
             } else {
                 Alert.error("Error updating class:", error);
             }
@@ -123,25 +120,24 @@ const SuperAdmin_Classes = () => {
     };
 
     // Handle deleting class
-    const handleDelete = (class_id) => {
-        const updatedClasses = classList.filter((classItem) => classItem.class_id !== class_id);
-        setclassList(updatedClasses);
-
+    const handleDelete = (subject_id) => {
+       
         const formData = new FormData();
-        formData.append("class_id", class_id);
+        formData.append("subject_id", subject_id);
         formData.append("type", "delete");
         formData.append("user_id", user_id);
         formData.append("token", token);
 
         // console.log(formData); return
 
-        axios.post(`${import.meta.env.VITE_API_ADMIN_ADD_UPDATE_CLASS}`, formData, {
+        axios.post(`${import.meta.env.VITE_API_ADMIN_ADD_UPDATE_SUBJECT}`, formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             }
         }).then(response => {
             if (response.data.msg === "success") {
-                Alert.success("Class deleted successfully!");
+                getSubjects();
+                Alert.success("Subject deleted successfully!");
             } else {
                 Alert.error("Error deletion class:", error);
             }
@@ -151,21 +147,21 @@ const SuperAdmin_Classes = () => {
     };
 
     // Open the modal for confirmation
-    const openDeleteModal = (class_id) => {
-        setClassToDelete(class_id);
+    const openDeleteModal = (subject_id) => {
+        setSubjectToDelete(subject_id);
         setShowModal(true);
     };
 
     // Close the modal without deleting
     const closeModal = () => {
         setShowModal(false);
-        setClassToDelete(null);
+        setSubjectToDelete(null);
     };
 
     // Confirm delete action
     const confirmDelete = () => {
-        if (classToDelete !== null) {
-            handleDelete(classToDelete);
+        if (SubjectToDelete !== null) {
+            handleDelete(SubjectToDelete);
             closeModal();
         }
     };
@@ -182,31 +178,31 @@ const SuperAdmin_Classes = () => {
                                 <section className='container-fluid p-0'>
                                     <div className="container">
                                         <div className="row p-2 bg-white">
-                                            <div className="col-12 text-center my-4"><h3>{board_name} Board </h3></div>
-                                            <div className='col-12 mb-3 d-flex justify-content-end'>
-                                                <button onClick={() => addClasses()} className='btn btn-sm btn-success'>Add Classes</button>
+                                            <div className="col-12 text-center my-4"><h3> All Subjects of class {class_name}</h3></div>
+                                            <div className='col-12 mb-3 jbc'>
+                                                <button onClick={() => addSubjects(class_id)} className='btn btn-sm btn-success'>Add Subjects</button>
                                             </div>
                                             <table className='col-12 text-center table tabled-bordered table-stripped'>
                                                 <thead>
                                                     <tr>
-                                                        <th>Class ID</th>
-                                                        <th>Class Name</th>
+                                                        <th>Subject ID</th>
+                                                        <th>Subject Name</th>
                                                         <th>Action</th>
-                                                        <th>Subjects</th>
+                                                        <th>Topics</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     {
-                                                        classList.length > 0 ?
-                                                            classList.map((data, index) => (
-                                                                <List1
+                                                        subjectList.length > 0 ?
+                                                            subjectList.map((data, index) => (
+                                                                <List3
                                                                     key={index}
                                                                     data={data}
                                                                     handleUpdate={handleUpdate}
                                                                     openDeleteModal={openDeleteModal} // Open modal for delete
                                                                 />
                                                             ))
-                                                            : <tr><td colSpan="4">No classes available</td></tr>
+                                                            : <tr><td colSpan="4">No Subject available</td></tr>
                                                     }
                                                 </tbody>
                                             </table>
@@ -239,4 +235,4 @@ const SuperAdmin_Classes = () => {
     );
 }
 
-export default SuperAdmin_Classes;
+export default SuperAdmin_topics;

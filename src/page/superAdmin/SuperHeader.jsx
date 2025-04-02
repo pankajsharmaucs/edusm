@@ -87,7 +87,7 @@ const SuperHeader = () => {
                   <div className='d-flex jsc'>
                     {
                       location.pathname == "/superAdmin" || location.pathname == "/superAdmin/"
-                      || location.pathname == "/superAdmin/dashboard"
+                        || location.pathname == "/superAdmin/dashboard"
                         ?
                         <>
                           <Link to={'/'}>
@@ -99,10 +99,10 @@ const SuperHeader = () => {
                         :
                         <>
                           <Back_Button />
-                          <Link className='text-dark'  to="/superAdmin/dashboard">
-                              Admin Panel
+                          <Link className='text-dark' to="/superAdmin/dashboard">
+                            Admin Panel
                           </Link>
-                          
+
                         </>
 
                     }
@@ -140,9 +140,14 @@ const SuperHeader = () => {
                               <div className='pt-1'>Home</div>
                             </Link>
 
-                            <Link className='link  jsc' onClick={() => setopenMenu(0)} to="/dashboard">
+                            <Link className='link  jsc' onClick={() => setopenMenu(0)} to="/superAdmin/dashboard">
                               <div className='me-3'> < SlList /></div>
                               Dashboard
+                            </Link>
+
+                            <Link className='link  jsc' onClick={() => setopenMenu(0)} to="/superAdmin/board">
+                              <div className='me-3'> < SlList /></div>
+                              All Board
                             </Link>
 
                             <div className='link jsc cp' onClick={() => userLogout()}>
